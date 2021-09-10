@@ -1,0 +1,36 @@
+<div id="btn">Click me!</div>
+<style>
+#btn {
+  border: solid
+}
+</style>
+<script>
+  btn.addEventListener("click", function (evt) {
+    console.group(`Click`);
+    console.log(`MouseEvent.metaKey: ${evt.metaKey}`);
+    console.log(`MouseEvent.which: ${evt.which}`);
+    console.log(`MouseEvent.button: ${evt.button}`);
+    console.groupEnd();
+  });
+  btn.addEventListener("mousedown", function (evt) {
+    console.group(`mousedown`);
+    console.log(`MouseEvent.metaKey: ${evt.metaKey}`);
+    console.log(`MouseEvent.which: ${evt.which}`);
+    console.log(`MouseEvent.button: ${evt.button}`);
+    console.groupEnd();
+  });
+  btn.addEventListener("mouseup", function (evt) {
+    console.group(`mouseup`);
+    console.log(`MouseEvent.metaKey: ${evt.metaKey}`);
+    console.log(`MouseEvent.which: ${evt.which}`);
+    console.log(`MouseEvent.button: ${evt.button}`);
+    console.groupEnd();
+  });
+  btn.addEventListener("contextmenu", function (evt) {
+    console.group(`contextmenu`);
+    console.log(`MouseEvent.metaKey: ${evt.metaKey}`);
+    console.log(`MouseEvent.which: ${evt.which}`);
+    console.log(`MouseEvent.button: ${evt.button}`);
+    console.groupEnd();
+  });
+</script>
