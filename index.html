@@ -1,10 +1,18 @@
 <div id="btn">Click me!</div>
+<p>Open devtool to see logs</p>
+<pre id="pre"></pre>
+
 <style>
 #btn {
   border: solid
 }
 </style>
+
 <script>
+  pre.textContent = code.textContent;
+</script>
+<script id="code">
+  // Source code
   btn.addEventListener("click", function (evt) {
     console.group(`Click`);
     console.log(`MouseEvent.metaKey: ${evt.metaKey}`);
@@ -33,4 +41,8 @@
     console.log(`MouseEvent.button: ${evt.button}`);
     console.groupEnd();
   });
+</script>
+
+<script>
+  pre.textContent = code.textContent;
 </script>
